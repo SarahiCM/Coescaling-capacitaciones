@@ -1,5 +1,5 @@
 import Waveform from './Waveform'
-
+// Este componente representa una tarjeta individual para cada capacitación, mostrando su nombre, instructor, descripción y un enlace para ver la grabación. Se utiliza el componente Waveform para mostrar una animación de onda de sonido junto al enlace de la grabación.
 export default function CapacitacionCard({ cap, index }) {
   const { nombre, instructor, descripcion, zoomLink, categoria } = cap
 

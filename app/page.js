@@ -3,19 +3,19 @@ import { capacitacionesDemo } from './demoData'
 import CapacitacionCard from './components/CapacitacionCard'
 
 export const revalidate = 60 // re-genera la página cada 60s con datos frescos de Sanity
-
+// Este es el componente principal de la página de inicio. Se encarga de obtener la lista de capacitaciones desde Sanity, manejar el estado de carga y mostrar las tarjetas de cada capacitación utilizando el componente CapacitacionCard. Si no hay capacitaciones publicadas, muestra un mensaje indicando que aún no hay contenido disponible.
 export default async function Home() {
   let capacitaciones = []
-
+// Se intenta obtener las capacitaciones desde Sanity. Si ocurre un error (por ejemplo, problemas de conexión o configuración), se captura la excepción y se asigna un arreglo vacío para evitar que la aplicación se rompa.
   try {
     capacitaciones = await getCapacitaciones()
   } catch (e) {
     capacitaciones = []
   }
-
+// Si no hay capacitaciones publicadas, se muestra el contenido de ejemplo definido en demoData.js para que la página no se vea vacía.
   const usandoDemo = !capacitaciones || capacitaciones.length === 0
   const lista = usandoDemo ? capacitacionesDemo : capacitaciones
-
+// Se renderiza la página con un header que presenta el catálogo de grabaciones, seguido de una sección principal que muestra todas las capacitaciones disponibles. Si no hay capacitaciones, se muestra un mensaje indicando que aún no hay contenido publicado. Finalmente, se incluye un footer con información de la empresa y el propósito de la prueba técnica.
   return (
     <>
       <header className="hero">

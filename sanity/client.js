@@ -4,7 +4,10 @@ export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'TU_PROJECT_ID',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   apiVersion: '2024-01-01',
-  useCdn: true, // `false` si quieres datos frescos en cada solicitud
+  // true = usa el CDN de Sanity (rápido, ideal para producción).
+  // Si cambia contenido y no se ve al instante, puede tardar unos segundos en propagar.
+  // Para ver cambios al instante en desarrollo, se cambia a false.
+  useCdn: true,
 })
 
 export async function getCapacitaciones() {

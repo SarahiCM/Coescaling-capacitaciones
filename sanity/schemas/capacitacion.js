@@ -1,3 +1,5 @@
+//Modelo de datos para las capacitaciones, con campos para nombre, instructor, descripción breve, link de grabación (Zoom), categoría y orden de aparición.
+
 export default {
   name: 'capacitacion',
   title: 'Capacitación',

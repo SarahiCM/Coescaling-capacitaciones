@@ -1,10 +1,10 @@
 import './globals.css'
-
+// Se define el título y la descripción de la página para mejorar el SEO y la experiencia del usuario.
 export const metadata = {
   title: 'Capacitaciones · Coescaling Consulting',
   description: 'Catálogo de capacitaciones internas de Coescaling Consulting.',
 }
-
+// Este es el layout principal de la aplicación, que envuelve todas las páginas. Aquí se pueden agregar elementos comunes como el header, footer o fuentes.
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
