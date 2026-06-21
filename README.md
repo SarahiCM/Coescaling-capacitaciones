@@ -12,10 +12,8 @@ Página para presentar las capacitaciones internas de Coescaling, con grabacione
 
 1. Instalar dependencias:
 
+   ```bash
    pnpm install
-
-   ```
-
    ```
 
 2. Crear un proyecto en [sanity.io](https://www.sanity.io/manage) (gratis) y copiar tu **Project ID**.
